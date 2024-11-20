@@ -1,0 +1,12 @@
+# Blockchain Configuration
+CONTRACT_ADDRESS=0x123...  # Replace with actual deployed contract address
+PRIVATE_KEY=your_private_key_here  # Replace with actual private key
+BLOCKCHAIN_NODE_URL=http://127.0.0.1:8545
+
+# Flask Configuration
+FLASK_APP=app.py
+FLASK_ENV=development
+SECRET_KEY=your_secret_key_here
+
+# Database Configuration (if needed)
+DATABASE_URL=sqlite:///trade_finance.db
