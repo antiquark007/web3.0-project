@@ -1,0 +1,23 @@
+flowchart LR
+    subgraph "Current Process"
+        B[Buyer] -->|1. Places Order| S[Seller]
+        B -->|2. Requests LC| BB[Buyer's Bank]
+        BB -->|3. Issues LC| SB[Seller's Bank]
+        S -->|4. Ships Goods| B
+        S -->|5. Submits Documents| SB
+        SB -->|6. Forwards Documents| BB
+        BB -->|7. Reviews & Pays| SB
+        SB -->|8. Pays| S
+    end
+
+    subgraph "Pain Points"
+        P1[Paper Documents] -.-> BB
+        P2[Delayed Payments] -.-> SB
+        P3[Invoice Factoring Issues] -.-> S
+        P4[Multiple Versions] -.-> BB & SB
+    end
+
+    style P1 fill:#ffcccc
+    style P2 fill:#ffcccc
+    style P3 fill:#ffcccc
+    style P4 fill:#ffcccc

@@ -1,0 +1,28 @@
+flowchart TD
+    subgraph "Blockchain Network"
+        SC[Smart Contracts]
+        DL[Distributed Ledger]
+    end
+
+    subgraph "Application Layer"
+        UI[Web Interface]
+        API[REST APIs]
+        DHE[Document Hash Engine]
+    end
+
+    subgraph "Participants"
+        B[Buyer]
+        S[Seller]
+        BB[Buyer Bank]
+        SB[Seller Bank]
+    end
+
+    B & S & BB & SB -->|Access| UI
+    UI <-->|Requests| API
+    API <-->|Interacts| SC
+    SC <-->|Records| DL
+    DHE -->|Document Verification| SC
+
+    style SC fill:#90EE90
+    style DL fill:#90EE90
+    style DHE fill:#98FB98
